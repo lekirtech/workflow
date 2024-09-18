@@ -112,7 +112,7 @@ describe('ImportService', () => {
 
 	test('should leave intact new-format credentials', async () => {
 		const credential = {
-			n8nApi: { id: '123', name: 'n8n API' },
+			n8nApi: { id: '123', name: 'Assistnify API' },
 		};
 
 		const nodes: INode[] = [

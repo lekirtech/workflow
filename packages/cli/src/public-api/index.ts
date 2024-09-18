@@ -43,7 +43,7 @@ async function createApiRouter(
 			serveFiles(swaggerDocument),
 			setup(swaggerDocument, {
 				customCss: swaggerThemeCss,
-				customSiteTitle: 'n8n Public API UI',
+				customSiteTitle: 'Assistnify Public API UI',
 				customfavIcon: `${n8nPath}favicon.ico`,
 			}),
 		);

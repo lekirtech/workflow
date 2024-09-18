@@ -5,7 +5,7 @@ import { MIN_PASSWORD_CHAR_LENGTH, MAX_PASSWORD_CHAR_LENGTH } from '@/constants'
 
 import type { CredentialPayload } from './types';
 
-export const randomApiKey = () => `n8n_api_${randomString(40)}`;
+export const randomApiKey = () => `assistnify_api_${randomString(40)}`;
 
 export const chooseRandomly = <T>(array: T[]) => array[randomInt(array.length)];
 

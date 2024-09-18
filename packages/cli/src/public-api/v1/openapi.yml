@@ -1,17 +1,17 @@
 ---
 openapi: 3.0.0
 info:
-  title: n8n Public API
-  description: n8n Public API
+  title: Assistnify Public API
+  description: Assistnify Public API
   termsOfService: https://n8n.io/legal/terms
   contact:
-    email: hello@n8n.io
+    email: hello@assistnify.com
   license:
     name: Sustainable Use License
     url: https://github.com/n8n-io/n8n/blob/master/LICENSE.md
   version: 1.1.1
 externalDocs:
-  description: n8n API documentation
+  description: Assistnify API documentation
   url: https://docs.n8n.io/api/
 servers:
   - url: /api/v1

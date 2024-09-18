@@ -31,14 +31,6 @@ export default defineComponent({
 		sidebarMenuItems(): IMenuItem[] {
 			const menuItems: IMenuItem[] = [
 				{
-					id: 'settings-usage-and-plan',
-					icon: 'chart-bar',
-					label: this.$locale.baseText('settings.usageAndPlan.title'),
-					position: 'top',
-					available: this.canAccessUsageAndPlan(),
-					route: { to: { name: VIEWS.USAGE } },
-				},
-				{
 					id: 'settings-personal',
 					icon: 'user-circle',
 					label: this.$locale.baseText('settings.personal'),
@@ -62,39 +54,8 @@ export default defineComponent({
 					available: this.canAccessApiSettings(),
 					route: { to: { name: VIEWS.API_SETTINGS } },
 				},
-				{
-					id: 'settings-external-secrets',
-					icon: 'vault',
-					label: this.$locale.baseText('settings.externalSecrets.title'),
-					position: 'top',
-					available: this.canAccessExternalSecrets(),
-					route: { to: { name: VIEWS.EXTERNAL_SECRETS_SETTINGS } },
-				},
 
-				{
-					id: 'settings-source-control',
-					icon: 'code-branch',
-					label: this.$locale.baseText('settings.sourceControl.title'),
-					position: 'top',
-					available: this.canAccessSourceControl(),
-					route: { to: { name: VIEWS.SOURCE_CONTROL } },
-				},
-				{
-					id: 'settings-sso',
-					icon: 'user-lock',
-					label: this.$locale.baseText('settings.sso'),
-					position: 'top',
-					available: this.canAccessSso(),
-					route: { to: { name: VIEWS.SSO_SETTINGS } },
-				},
-				{
-					id: 'settings-ldap',
-					icon: 'network-wired',
-					label: this.$locale.baseText('settings.ldap'),
-					position: 'top',
-					available: this.canAccessLdapSettings(),
-					route: { to: { name: VIEWS.LDAP_SETTINGS } },
-				},
+			
 				{
 					id: 'settings-workersview',
 					icon: 'project-diagram',
@@ -120,14 +81,6 @@ export default defineComponent({
 				}
 			}
 
-			menuItems.push({
-				id: 'settings-log-streaming',
-				icon: 'sign-in-alt',
-				label: this.$locale.baseText('settings.log-streaming'),
-				position: 'top',
-				available: this.canAccessLogStreamingSettings(),
-				route: { to: { name: VIEWS.LOG_STREAMING_SETTINGS } },
-			});
 
 			menuItems.push({
 				id: 'settings-community-nodes',

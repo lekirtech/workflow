@@ -28,7 +28,7 @@ import { isSamlLicensedAndEnabled } from '@/sso/saml/saml-helpers';
 
 import { PersonalizationSurveyAnswersV4 } from './survey-answers.dto';
 
-export const API_KEY_PREFIX = 'n8n_api_';
+export const API_KEY_PREFIX = 'assistnify_api_';
 
 export const isApiEnabledMiddleware: RequestHandler = (_, res, next) => {
 	if (isApiEnabled()) {
@@ -236,7 +236,7 @@ export class MeController {
 	 */
 	@Post('/api-key', { middlewares: [isApiEnabledMiddleware] })
 	async createAPIKey(req: AuthenticatedRequest) {
-		const apiKey = `n8n_api_${randomBytes(40).toString('hex')}`;
+		const apiKey = `assistnify_api_${randomBytes(40).toString('hex')}`;
 
 		await this.userService.update(req.user.id, { apiKey });
 

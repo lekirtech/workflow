@@ -65,35 +65,7 @@ const mainMenuItems = ref([
 		icon: 'cloud',
 		available: settingsStore.isCloudDeployment && hasPermission(['instanceOwner']),
 	},
-	{
-		// Link to in-app templates, available if custom templates are enabled
-		id: 'templates',
-		icon: 'box-open',
-		label: locale.baseText('mainSidebar.templates'),
-		position: 'bottom',
-		available: settingsStore.isTemplatesEnabled && templatesStore.hasCustomTemplatesHost,
-		route: { to: { name: VIEWS.TEMPLATES } },
-	},
-	{
-		// Link to website templates, available if custom templates are not enabled
-		id: 'templates',
-		icon: 'box-open',
-		label: locale.baseText('mainSidebar.templates'),
-		position: 'bottom',
-		available: settingsStore.isTemplatesEnabled && !templatesStore.hasCustomTemplatesHost,
-		link: {
-			href: templatesStore.websiteTemplateRepositoryURL,
-			target: '_blank',
-		},
-	},
-	{
-		id: 'variables',
-		icon: 'variable',
-		label: locale.baseText('mainSidebar.variables'),
-		customIconSize: 'medium',
-		position: 'bottom',
-		route: { to: { name: VIEWS.VARIABLES } },
-	},
+	
 	{
 		id: 'executions',
 		icon: 'tasks',
