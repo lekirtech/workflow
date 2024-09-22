@@ -254,8 +254,12 @@ export class License {
 	}
 
 	isSamlEnabled() {
-		return this.isFeatureEnabled(LICENSE_FEATURES.SAML);
+		return true;
 	}
+
+	//isSamlEnabled() {
+	//	return this.isFeatureEnabled(LICENSE_FEATURES.SAML);
+	//}
 
 	isAiAssistantEnabled() {
 		return this.isFeatureEnabled(LICENSE_FEATURES.AI_ASSISTANT);
@@ -265,8 +269,12 @@ export class License {
 		return this.isFeatureEnabled(LICENSE_FEATURES.ADVANCED_EXECUTION_FILTERS);
 	}
 
+	////isAdvancedPermissionsLicensed() {
+		//return this.isFeatureEnabled(LICENSE_FEATURES.ADVANCED_PERMISSIONS);
+	//}
+
 	isAdvancedPermissionsLicensed() {
-		return this.isFeatureEnabled(LICENSE_FEATURES.ADVANCED_PERMISSIONS);
+		return true;
 	}
 
 	isDebugInEditorLicensed() {
@@ -281,9 +289,14 @@ export class License {
 		return this.isFeatureEnabled(LICENSE_FEATURES.MULTIPLE_MAIN_INSTANCES);
 	}
 
+	//isVariablesEnabled() {
+	//	return this.isFeatureEnabled(LICENSE_FEATURES.VARIABLES);
+	//}
+
 	isVariablesEnabled() {
-		return this.isFeatureEnabled(LICENSE_FEATURES.VARIABLES);
+		return true;
 	}
+
 
 	isSourceControlLicensed() {
 		return this.isFeatureEnabled(LICENSE_FEATURES.SOURCE_CONTROL);

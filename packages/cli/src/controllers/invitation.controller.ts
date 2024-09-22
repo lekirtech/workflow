@@ -97,12 +97,19 @@ export class InvitationController {
 				);
 			}
 
-			if (invite.role === 'global:admin' && !this.license.isAdvancedPermissionsLicensed()) {
+			//if (invite.role === 'global:admin' && !this.license.isAdvancedPermissionsLicensed()) {
+			//	throw new ForbiddenError(
+			//		'Cannot invite admin user without advanced permissions. Please upgrade to a license that includes this feature.',
+			//	);
+			//}
+
+			if (invite.role === 'global:admin' && this.license.isAdvancedPermissionsLicensed()) {
 				throw new ForbiddenError(
 					'Cannot invite admin user without advanced permissions. Please upgrade to a license that includes this feature.',
 				);
 			}
 		});
+
 
 		const attributes = req.body.map(({ email, role }) => ({
 			email,
